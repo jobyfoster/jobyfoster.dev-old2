@@ -11,6 +11,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 1em 5em;
@@ -57,7 +61,7 @@ body {
 /* Content Container */
 .content-container {
   margin-top: 2em;
-  padding: 10em 5em;
+  padding: 6em 5em;
   color: white;
   background-color: var(--nav-bg-color);
 }
@@ -150,8 +154,8 @@ body {
 }
 
 #about-me-overview:hover #headshot {
-  width: 9em;
-  height: 9em;
+  width: 8.8em;
+  height: 8.8em;
   margin: 0.5em 0.6em;
 }
 
@@ -165,7 +169,7 @@ body {
 }
 
 #about-me-overview:hover .custom-hr {
-  margin: 0.7em 0.3em;
+  margin: 0.7em 0;
 }
 
 /* About me text */
@@ -284,11 +288,12 @@ body {
   border: 1px #2b2b2b solid;
   border-radius: 10px;
 
-  transition: transform 0.5s;
+  transition: transform 0.5s, box-shadow 0.5s;
 }
 
 .project-card:hover {
-  transform: translateY(1em);
+  transform: translateY(-1em);
+  box-shadow: 0px 0px 15px #2e2e2e;
 }
 
 .project-name {
@@ -309,7 +314,7 @@ body {
   word-spacing: 1px;
 
   line-height: 1.4em;
-  padding: 1em 1.5em;
+  padding: 1em 1.5em 0;
 }
 
 .project-link {
@@ -334,14 +339,16 @@ body {
   width: 100%;
   display: flex;
   flex-flow: row wrap;
-
-  justify-content: space-evenly;
   align-items: center;
+  justify-content: center;
 }
 
 .project-skill {
-  width: 3em;
+  width: auto;
   height: 3em;
+  margin: 0 10px;
+
+  color: white;
 }
 
 @media only screen and (max-width: 900px) {
