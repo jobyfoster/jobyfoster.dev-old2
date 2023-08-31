@@ -1,0 +1,445 @@
+/* Variables */
+:root {
+  --main-bg-color: #121212;
+  --nav-bg-color: #1e1e1e;
+}
+
+/* Global Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 1em 5em;
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--main-bg-color);
+}
+
+/* Navbar Styles */
+#navbar {
+  background-color: var(--nav-bg-color);
+  display: flex;
+  justify-content: space-between;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3em;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: 3px 5px 30px #1b1b1b;
+  border-radius: 0.2em;
+}
+
+#navbar li {
+  padding: 0.8em 3em;
+}
+
+.nav-link {
+  transition: transform 0.2s ease-out;
+}
+
+.nav-link:hover {
+  transform: translateY(-2px);
+}
+
+.nav-link a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-link a:hover {
+  color: rgb(241, 241, 241);
+  text-decoration: underline;
+}
+
+/* Content Container */
+.content-container {
+  margin-top: 2em;
+  padding: 10em 5em;
+  color: white;
+  background-color: var(--nav-bg-color);
+}
+
+/* About Me Section */
+#about-me {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 2em 3em;
+  color: white;
+}
+
+/* About me overview */
+#about-me-overview {
+  display: flex;
+  flex-flow: row wrap;
+
+  width: 45em;
+  height: fit-content;
+
+  padding: 2em 2em 2em;
+
+  background: linear-gradient(
+    -120deg,
+    #1e1e1e6c 40%,
+    rgba(44, 43, 43, 0.425) 100%
+  );
+
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px #2e2e2e;
+
+  transition: width 0.5s, border-radius 0.3s, padding 0.7s, margin 1s;
+}
+
+#about-me-overview:hover {
+  padding: 1.5em;
+  width: 45em;
+  border-radius: 20px;
+}
+
+/* Name and title container */
+#name-title {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+
+  margin: 25px;
+
+  width: auto;
+
+  transition: margin 1s;
+}
+
+#about-me-overview:hover #name-title {
+  margin: 20px;
+}
+
+/* My name */
+#name {
+  font-size: 2.5em;
+  transition: font-size 1s;
+}
+
+#about-me-overview:hover #name {
+  font-size: 2.3em;
+}
+
+/* Career title */
+#title {
+  font-size: 1.2em;
+  transition: font-size 1s;
+}
+
+#about-me-overview:hover #title {
+  font-size: 1.1em;
+}
+
+/* Headshot photo */
+#headshot {
+  border-radius: 50%;
+  margin: 0.6em 0.8em;
+  display: block;
+
+  width: 9.5em;
+  height: 9.5em;
+
+  transition: width 1s, height 1s, margin 1s;
+}
+
+#about-me-overview:hover #headshot {
+  width: 9em;
+  height: 9em;
+  margin: 0.5em 0.6em;
+}
+
+.custom-hr {
+  margin: 1em 0.5em;
+  height: 1px;
+  width: 100%;
+  background-color: white;
+
+  transition: margin 0.5s;
+}
+
+#about-me-overview:hover .custom-hr {
+  margin: 0.7em 0.3em;
+}
+
+/* About me text */
+#overview-text {
+  padding: 0.5em;
+  font-size: 1.3em;
+  width: 100%;
+
+  transition: padding 0.5s;
+}
+
+#about-me-overview:hover #overview-text {
+  padding: 1em;
+}
+
+/* School names */
+#shs-name,
+#bcca-name {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+/* Explore my work section */
+#explore-my-work {
+  text-align: center;
+  height: fit-content;
+
+  align-self: center;
+
+  margin: 5em 10em;
+}
+
+/* Explore my work text */
+#emw-cta {
+  font-size: 3em;
+  font-weight: 600;
+
+  margin-bottom: 2em;
+
+  color: white;
+}
+
+/* Explore my work text gradient */
+#emw-gradient {
+  background-color: #40c9ff;
+  background-image: linear-gradient(45deg, #40c9ff, #e81cff);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+
+  font-weight: 700;
+}
+
+/* Explore my work button */
+#emw-button {
+  font-size: 1.5em;
+  padding: 10px 3em;
+  border-radius: 5px;
+
+  text-decoration: none;
+  color: white;
+
+  background-color: #318fce;
+  border: 1px #eeeeee94 solid;
+
+  transition: box-shadow 0.5s, background-color 0.5s, border 0.7s;
+  transition-timing-function: ease-in;
+}
+
+#emw-button:hover {
+  background-color: #379bdd;
+  border: 2px #eee solid;
+  box-shadow: 0px 0px 20px #5c5c5c;
+}
+
+#projects {
+  margin: 15em 10em;
+}
+
+.sub-headings {
+  font-size: 2.8em;
+  font-weight: 600;
+
+  margin-left: 1em;
+}
+
+/* TODO Project section styling */
+#project-cards-container {
+  padding-top: 1em;
+  display: flex;
+  flex-flow: row wrap;
+
+  justify-content: space-around;
+}
+
+.project-card {
+  padding: 1.5em 1em;
+  margin: 3em 2em;
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+
+  background: linear-gradient(
+    130deg,
+    #1e1e1e6c 40%,
+    rgba(44, 43, 43, 0.425) 100%
+  );
+
+  width: 25em;
+
+  border: 1px #2b2b2b solid;
+  border-radius: 10px;
+}
+
+.project-name {
+  text-decoration: underline;
+  padding: 0 0.5em 0.5em;
+  font-size: 1.8em;
+  font-weight: 600;
+}
+
+.project-image {
+  width: 80%;
+}
+
+.project-description {
+  font-size: 1.3em;
+  text-align: center;
+
+  word-spacing: 1px;
+
+  line-height: 1.4em;
+  padding: 1em 1.5em;
+}
+
+.project-link {
+  color: white;
+  text-decoration: none;
+
+  font-size: 1.5em;
+  padding: 0.5em 3em;
+  margin: 1em 0;
+
+  background-color: #292929;
+  border: 2px #303030 solid;
+
+  transition: background-color 1s;
+}
+
+.project-link:hover {
+  background-color: #1b1b1b;
+}
+
+.project-skills {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.project-skill {
+  width: 3em;
+  height: 3em;
+}
+
+@media only screen and (max-width: 900px) {
+  body {
+    padding: 0;
+    margin: 0;
+  }
+  .content-container {
+    padding: 1em 1.5em;
+    color: white;
+  }
+  #navbar {
+    display: none;
+  }
+
+  #about-me {
+    padding: 1em;
+    margin: 0;
+    flex-flow: column wrap;
+  }
+
+  #about-me-overview {
+    margin: 1em 0;
+    width: 100%;
+
+    transition: none;
+  }
+
+  #about-me-overview:hover {
+    padding: 1em 2em 2em;
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  #headshot {
+    display: none;
+  }
+
+  #name {
+    font-size: 2.3em;
+  }
+  #name-title {
+    margin: 0.5em;
+  }
+  #overview-text {
+    font-size: 1.1em;
+  }
+  #explore-my-work {
+    padding: 5em 0;
+    margin: 0;
+  }
+
+  #emw-cta {
+    font-size: 2.5em;
+  }
+
+  #emw-button {
+    padding: 5px 2em;
+    font-size: 1.5em;
+    width: 70%;
+  }
+
+  .sub-headings {
+    font-size: 2.8em;
+    font-weight: 600;
+  }
+
+  /* TODO Project section styling */
+  #project-cards-container {
+    padding-top: 1em;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .project-card {
+    padding: 0.5em;
+    margin: 3em 2em;
+
+    display: flex;
+    flex-flow: column nowrap;
+
+    background: linear-gradient(
+      -120deg,
+      #1e1e1e6c 40%,
+      rgba(44, 43, 43, 0.425) 100%
+    );
+
+    width: 25em;
+
+    border: 1px #2b2b2b solid;
+    border-radius: 10px;
+  }
+
+  .project-name {
+    align-self: center;
+    margin-bottom: 0.5em;
+    font-size: 1.4em;
+    font-weight: 600;
+  }
+
+  .project-image {
+    align-self: center;
+    width: 90%;
+  }
+}
