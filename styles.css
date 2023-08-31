@@ -246,7 +246,7 @@ body {
 }
 
 #projects {
-  margin: 15em 10em;
+  margin: 15em 8em;
 }
 
 .sub-headings {
@@ -262,12 +262,12 @@ body {
   display: flex;
   flex-flow: row wrap;
 
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .project-card {
   padding: 1.5em 1em;
-  margin: 3em 2em;
+  margin: 3em 1em;
 
   display: flex;
   flex-flow: column nowrap;
@@ -283,6 +283,12 @@ body {
 
   border: 1px #2b2b2b solid;
   border-radius: 10px;
+
+  transition: transform 0.5s;
+}
+
+.project-card:hover {
+  transform: translateY(1em);
 }
 
 .project-name {
