@@ -302,7 +302,6 @@ body {
   margin: 0;
 }
 
-/* TODO Project section styling */
 #project-cards-container {
   padding-top: 1em;
   justify-content: space-evenly;
@@ -442,13 +441,17 @@ body {
   color: #0496ff;
 }
 
-#contacts {
+#socials {
   margin: 8em 8em 0;
   align-items: center;
 }
 
-.contact-cta {
+.social-cta {
   text-align: center;
+}
+
+#social-links {
+  align-content: center;
 }
 
 @media only screen and (max-width: 900px) {
@@ -524,7 +527,6 @@ body {
     font-weight: 600;
   }
 
-  /* TODO Project section styling */
   #project-cards-container {
     padding-top: 1em;
     padding: 0;
