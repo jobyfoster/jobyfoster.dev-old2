@@ -22,6 +22,54 @@ body {
   background-color: var(--main-bg-color);
 }
 
+/* Reusable text classes */
+.text-lg {
+  font-size: 3em;
+  font-weight: 600;
+}
+
+.text-md {
+  font-size: 1.5em;
+}
+
+.text-sm {
+  font-size: 1.3em;
+}
+
+/* Reusable box classes */
+.box-lg {
+  padding: 2.5em 3em;
+}
+
+.box-md {
+  padding: 1.5em 1em;
+  margin: 3em 1em;
+}
+
+.box-sm {
+  padding: 0.5em;
+}
+
+/* Hover effect */
+.hover-raise {
+  transition: transform 0.2s ease-out;
+}
+
+.hover-raise:hover {
+  transform: translateY(-2px);
+}
+
+/* Flexbox */
+.flex-row-wrap {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.flex-column-wrap {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
 /* Navbar Styles */
 #navbar {
   background-color: var(--nav-bg-color);
@@ -38,14 +86,6 @@ body {
 
 #navbar li {
   padding: 0.8em 3em;
-}
-
-.nav-link {
-  transition: transform 0.2s ease-out;
-}
-
-.nav-link:hover {
-  transform: translateY(-2px);
 }
 
 .nav-link a {
@@ -68,23 +108,15 @@ body {
 
 /* About Me Section */
 #about-me {
-  display: flex;
-  flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
-  margin: 2em 3em;
   color: white;
 }
 
 /* About me overview */
 #about-me-overview {
-  display: flex;
-  flex-flow: row wrap;
-
-  width: 45em;
-  height: fit-content;
-
-  padding: 2em 2em 2em;
+  width: 50em;
+  height: auto;
 
   background: linear-gradient(
     -120deg,
@@ -95,72 +127,61 @@ body {
   border-radius: 5px;
   box-shadow: 0px 0px 15px #2e2e2e;
 
-  transition: width 0.5s, border-radius 0.3s, padding 0.7s, margin 1s;
+  padding-bottom: 2em;
+
+  transition: border-radius 0.3s, padding 0.7s;
 }
 
 #about-me-overview:hover {
-  padding: 1.5em;
-  width: 45em;
-  border-radius: 20px;
+  padding: 2em;
+  border-radius: 10px;
 }
 
 /* Name and title container */
 #name-title {
-  display: flex;
-  flex-flow: column nowrap;
   justify-content: flex-end;
-
-  margin: 25px;
-
+  margin: 15px 20px;
   width: auto;
 
-  transition: margin 1s;
+  transition: margin 1s, transform 1.3s;
 }
 
 #about-me-overview:hover #name-title {
-  margin: 20px;
+  margin: 15px;
+  transform: scale(0.95);
 }
 
 /* My name */
 #name {
   font-size: 2.5em;
-  transition: font-size 1s;
-}
-
-#about-me-overview:hover #name {
-  font-size: 2.3em;
 }
 
 /* Career title */
 #title {
-  font-size: 1.2em;
-  transition: font-size 1s;
-}
-
-#about-me-overview:hover #title {
-  font-size: 1.1em;
+  font-size: 1.3em;
 }
 
 /* Headshot photo */
 #headshot {
-  border-radius: 50%;
-  margin: 0.6em 0.8em;
+  box-sizing: content-box;
+  padding-top: 0;
+  border-radius: 51%;
   display: block;
 
-  width: 9.5em;
-  height: 9.5em;
+  width: 10em;
+  height: 10em;
 
-  transition: width 1s, height 1s, margin 1s;
+  transition: width 1s, height 1s, margin 1s, padding 1s;
 }
 
 #about-me-overview:hover #headshot {
-  width: 8.8em;
-  height: 8.8em;
-  margin: 0.5em 0.6em;
+  width: 9em;
+  height: 9em;
+  padding: 0.5em 0.5em 0.3em;
 }
 
 .custom-hr {
-  margin: 1em 0.5em;
+  margin: 1em 0;
   height: 1px;
   width: 100%;
   background-color: white;
@@ -174,15 +195,12 @@ body {
 
 /* About me text */
 #overview-text {
-  padding: 0.5em;
-  font-size: 1.3em;
   width: 100%;
-
   transition: padding 0.5s;
 }
 
 #about-me-overview:hover #overview-text {
-  padding: 1em;
+  padding: 1em 1em 0.5em;
 }
 
 /* School names */
@@ -199,17 +217,11 @@ body {
   height: fit-content;
 
   align-self: center;
-
-  margin: 5em 10em;
 }
 
 /* Explore my work text */
 #emw-cta {
-  font-size: 3em;
-  font-weight: 600;
-
   margin-bottom: 2em;
-
   color: white;
 }
 
@@ -229,8 +241,7 @@ body {
 
 /* Explore my work button */
 #emw-button {
-  font-size: 1.5em;
-  padding: 10px 3em;
+  padding: 0.4em 3em;
   border-radius: 5px;
 
   text-decoration: none;
@@ -239,7 +250,7 @@ body {
   background-color: #318fce;
   border: 1px #eeeeee94 solid;
 
-  transition: box-shadow 0.5s, background-color 0.5s, border 0.7s;
+  transition: box-shadow 0.8s, background-color 0.5s, border 0.7s;
   transition-timing-function: ease-in;
 }
 
@@ -247,34 +258,25 @@ body {
   background-color: #379bdd;
   border: 2px #eee solid;
   box-shadow: 0px 0px 20px #5c5c5c;
+  transition-timing-function: ease-out;
 }
 
 #projects {
-  margin: 15em 8em;
+  margin: 15em 8em 10em;
 }
 
-.sub-headings {
-  font-size: 2.8em;
-  font-weight: 600;
-
-  margin-left: 1em;
+#projects-header {
+  text-align: center;
+  margin: 0;
 }
 
 /* TODO Project section styling */
 #project-cards-container {
   padding-top: 1em;
-  display: flex;
-  flex-flow: row wrap;
-
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .project-card {
-  padding: 1.5em 1em;
-  margin: 3em 1em;
-
-  display: flex;
-  flex-flow: column nowrap;
   align-items: center;
 
   background: linear-gradient(
@@ -298,7 +300,7 @@ body {
 
 .project-name {
   text-decoration: underline;
-  padding: 0 0.5em 0.5em;
+  padding-top: 0;
   font-size: 1.8em;
   font-weight: 600;
 }
@@ -308,20 +310,19 @@ body {
 }
 
 .project-description {
-  font-size: 1.3em;
   text-align: center;
 
   word-spacing: 1px;
 
   line-height: 1.4em;
-  padding: 1em 1.5em 0;
+  padding-bottom: 0;
+  margin: 0;
 }
 
 .project-link {
   color: white;
   text-decoration: none;
 
-  font-size: 1.5em;
   padding: 0.5em 3em;
   margin: 1em 0;
 
@@ -337,8 +338,6 @@ body {
 
 .project-skills {
   width: 100%;
-  display: flex;
-  flex-flow: row wrap;
   align-items: center;
   justify-content: center;
 }
@@ -349,6 +348,74 @@ body {
   margin: 0 10px;
 
   color: white;
+}
+
+#resume {
+  text-align: center;
+  margin: 8em 6em 0;
+}
+
+#resume-cta {
+  margin-bottom: 1.5em;
+  color: white; /* default color */
+
+  transition: color 0.3s ease-out, text-shadow 0.3s ease-out;
+}
+
+#resume-link {
+  background: linear-gradient(
+    90deg,
+    #2d2d2d 0%,
+    #3a3a3a 100%
+  ); /* Neutral Grays */
+  border: 2px #464646 solid;
+  text-decoration: none;
+  color: white;
+  padding: 0.7em 2.5em;
+
+  font-weight: 600;
+
+  border-radius: 1em;
+  box-shadow: 0 0.3em 0.9em rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+#resume-link:hover {
+  transform: scale(1.05);
+  transition-timing-function: ease-in;
+  box-shadow: 0 0.5em 1.2em rgba(0, 0, 0, 0.5); /* Increase shadow on hover */
+}
+
+#resume:hover #resume-cta {
+  color: #dfdfdf; /* Lighter Gray */
+  transition-timing-function: ease-in;
+  text-shadow: 0 0 0.3em #ffffff21; /* Text glow */
+}
+
+#resume-link:active {
+  transform: scale(1); /* Reset scale when button is clicked */
+  box-shadow: 0 0.2em 0.6em rgba(0, 0, 0, 0.1);
+}
+
+#cta-ktt {
+  text-decoration: underline solid transparent;
+  transition: text-decoration 0.3s ease-out, color 0.3s ease-out,
+    text-shadow 0.3s ease-in-out;
+}
+#resume:hover #cta-ktt {
+  text-decoration: underline solid #0496ff;
+  text-shadow: 0 0 10px #0496ff38;
+  transition-timing-function: ease-in;
+  color: #0496ff;
+}
+
+#contacts {
+  margin: 8em 8em 0;
+  align-items: center;
+}
+
+#contact-cta {
+  text-align: center;
 }
 
 @media only screen and (max-width: 900px) {
@@ -371,6 +438,7 @@ body {
   }
 
   #about-me-overview {
+    padding: 1em 1.25em 1em;
     margin: 1em 0;
     width: 100%;
 
@@ -390,29 +458,36 @@ body {
   #name {
     font-size: 2.3em;
   }
+
   #name-title {
     margin: 0.5em;
   }
+
   #overview-text {
     font-size: 1.1em;
   }
+
   #explore-my-work {
-    padding: 5em 0;
+    padding: 4em 0;
     margin: 0;
   }
 
   #emw-cta {
-    font-size: 2.5em;
+    font-size: 2.3em;
   }
 
   #emw-button {
-    padding: 5px 2em;
+    padding: 0.3em 1.5em;
     font-size: 1.5em;
     width: 70%;
   }
 
+  #projects {
+    margin: 0;
+  }
+
   .sub-headings {
-    font-size: 2.8em;
+    font-size: 2.5em;
     font-weight: 600;
   }
 
@@ -454,5 +529,17 @@ body {
   .project-image {
     align-self: center;
     width: 90%;
+  }
+
+  .project-description {
+    padding: 1em 0.5em;
+  }
+
+  .project-link {
+    font-size: 1.3em;
+  }
+
+  .project-skill {
+    margin: 0 15px;
   }
 }

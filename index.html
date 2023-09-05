@@ -27,42 +27,43 @@
   <body>
     <ul id="navbar" role="navigation">
       <li>
-        <div class="nav-link"><a href="/">Home</a></div>
+        <div class="nav-link hover-raise"><a href="/">Home</a></div>
       </li>
       <li>
-        <div class="nav-link"><a href="#about-me">About Me</a></div>
+        <div class="nav-link hover-raise"><a href="#about-me">About Me</a></div>
       </li>
       <li>
-        <div class="nav-link"><a href="#projects">Projects</a></div>
+        <div class="nav-link hover-raise"><a href="#projects">Projects</a></div>
       </li>
       <li>
-        <div class="nav-link"><a href="#resume">Resume</a></div>
+        <div class="nav-link hover-raise"><a href="#resume">Resume</a></div>
       </li>
+      <!-- <li>
+        <div class="nav-link hover-raise"><a href="#testemonials">Testimonials</a></div>
+      </li> -->
       <li>
-        <div class="nav-link"><a href="#testemonials">Testimonials</a></div>
-      </li>
-      <li>
-        <div class="nav-link"><a href="#contact">Contact</a></div>
+        <div class="nav-link hover-raise"><a href="#contact">Contact</a></div>
       </li>
     </ul>
     <div class="content-container" role="main">
-      <section id="about-me">
-        <div id="about-me-overview">
+      <section id="about-me" class="box-lg flex-row-wrap">
+        <div id="about-me-overview" class="box-lg flex-row-wrap">
           <img
             id="headshot"
-            src="images/headshot2.png"
+            class="box-sm"
+            src="images/headshot.png"
             alt="My Headshot"
             title="Me >:)"
             loading="lazy"
           />
 
-          <div id="name-title">
+          <div id="name-title" class="flex-column-wrap">
             <div id="name">Joby Foster</div>
             <div id="title">Software Developer</div>
           </div>
 
           <div class="custom-hr"></div>
-          <div id="overview-text">
+          <div id="overview-text" class="box-sm text-sm">
             Driven Full Stack developer with a CTE distinguished diploma and
             CSpire Certification from
             <a
@@ -82,13 +83,14 @@
           </div>
         </div>
 
-        <div id="explore-my-work">
-          <div id="emw-cta">
+        <div id="explore-my-work" class="box-lg">
+          <div id="emw-cta" class="text-lg">
             Transforming<br /><span id="emw-gradient">Ideas</span>
             Into Code
           </div>
           <a
             id="emw-button"
+            class="text-md"
             href="https://github.com/jobyfoster"
             target="_blank"
             rel="noreferrer"
@@ -98,29 +100,29 @@
       </section>
 
       <section id="projects">
+        <div class="text-lg" id="projects-header">Projects</div>
         <div class="custom-hr"></div>
-        <div id="projecting-heading">
-          <div class="sub-headings" id="projects-header">Projects</div>
-        </div>
-        <div id="project-cards-container">
-          <div class="project-card">
-            <div class="project-name">Snus-Check</div>
+        <div id="project-cards-container" class="flex-row-wrap">
+          <div class="project-card box-md flex-column-wrap">
+            <div class="project-name box-sm">Snus-Check</div>
             <img
               class="project-image"
               src="images/projects/snuscheck.png"
               alt="Snus-Check logo"
             />
-            <div class="project-description">
+            <div class="project-description text-sm box-md">
               Snus-Check specifically aims to make data breach research faster
               and more efficient.<br /><br />This is my first personal project
               while attending BCCA.
             </div>
             <a
               href="https://github.com/jobyfoster/snus-check"
-              class="project-link"
+              class="project-link text-md"
+              target="_blank"
+              rel="noreferrer"
               >View Project</a
             >
-            <div class="project-skills">
+            <div class="project-skills flex-row-wrap">
               <img
                 class="project-skill"
                 src="images/skill-icons/python.png"
@@ -138,6 +140,21 @@
               />
             </div>
           </div>
+        </div>
+      </section>
+
+      <section id="resume" class="box-lg">
+        <div id="resume-cta" class="text-lg">
+          See the Code, <span id="cta-ktt">Know the Talent</span>
+        </div>
+        <a id="resume-link" class="text-md" href="resume.pdf" target="_blank"
+          >View My Resume</a
+        >
+      </section>
+
+      <section id="contacts" class="box-lg flex-column-wrap">
+        <div id="contact-cta" class="text-lg">
+          Stay Updated, Stay Ahead.<br />Follow My Socials.
         </div>
       </section>
     </div>
