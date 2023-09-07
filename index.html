@@ -25,7 +25,7 @@
     <meta property="og:image" content="images/headshot.png" />
   </head>
   <body>
-    <ul id="navbar" role="navigation">
+    <ul id="navbar" class="flex-row-wrap" role="navigation">
       <li>
         <div class="nav-link hover-raise"><a href="/">Home</a></div>
       </li>
@@ -101,7 +101,6 @@
 
       <section id="projects">
         <div class="text-lg" id="projects-header">Projects</div>
-        <div class="custom-hr"></div>
         <div id="project-cards-container" class="flex-row-wrap">
           <div class="project-card box-md flex-column-wrap">
             <div class="project-name box-sm">Snus-Check</div>
@@ -143,22 +142,26 @@
         </div>
       </section>
 
-      <section id="resume" class="box-lg flex-column-wrap">
+      <section id="resume" class="flex-column-wrap">
         <div id="resume-cta" class="text-lg">
-          See the Work, <span id="cta-ktt">Know the Talent</span>
+          See the Work,
+          <a id="cta-ktt" href="resume.pdf" target="_blank">Know the Talent</a>
         </div>
-        <a id="resume-link" class="text-md" href="resume.pdf" target="_blank"
-          >View My Resume</a
-        >
       </section>
 
-      <section id="socials" class="box-lg flex-column-wrap">
-        <div class="social-cta text-lg">Stay Updated, Stay Ahead.</div>
+      <section id="socials" class="flex-column-wrap">
+        <div class="custom-hr"></div>
+        <div id="social-cta-first-line" class="social-cta text-lg">
+          Stay Updated, Stay Ahead.
+        </div>
+        <br />
         <div class="social-cta text-lg">Follow My Socials.</div>
 
-        <ul id="social-links" class="flex-row-wrap">
-          <li></li>
-        </ul>
+        <div id="social-links" class="flex-row-wrap">
+          <a href="https://github.com/jobyfoster"
+            ><img class="socials-img" src="images/socials/github.png" alt=""
+          /></a>
+        </div>
       </section>
     </div>
   </body>
