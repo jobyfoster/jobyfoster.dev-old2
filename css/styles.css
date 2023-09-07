@@ -404,11 +404,13 @@ body {
 #skills-header {
   padding-bottom: 0.8em;
 }
+
 .skill-data {
   padding-left: 2em;
 }
+
 .skill-image {
-  width: 3em;
+  width: 2.5em;
   height: auto;
   margin: auto 10px;
 
@@ -486,8 +488,8 @@ body {
 }
 
 .social-img {
-  width: 5em;
-  margin: 0 1em;
+  width: 4em;
+  margin: 0 0.5em;
 }
 
 @media only screen and (max-width: 1200px) {
