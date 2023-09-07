@@ -36,13 +36,13 @@
         <div class="nav-link hover-raise"><a href="#projects">Projects</a></div>
       </li>
       <li>
-        <div class="nav-link hover-raise"><a href="#resume">Resume</a></div>
+        <div class="nav-link hover-raise"><a href="/resume">Resume</a></div>
       </li>
       <!-- <li>
         <div class="nav-link hover-raise"><a href="#testemonials">Testimonials</a></div>
       </li> -->
       <li>
-        <div class="nav-link hover-raise"><a href="#contact">Contact</a></div>
+        <div class="nav-link hover-raise"><a href="#contacts">Contact</a></div>
       </li>
     </ul>
     <div class="content-container" role="main">
@@ -98,69 +98,147 @@
           >
         </div>
       </section>
-
-      <section id="projects">
-        <div class="text-lg" id="projects-header">Projects</div>
-        <div id="project-cards-container" class="flex-row-wrap">
-          <div class="project-card box-md flex-column-wrap">
-            <div class="project-name box-sm">Snus-Check</div>
-            <img
-              class="project-image"
-              src="images/projects/snuscheck.png"
-              alt="Snus-Check logo"
-            />
-            <div class="project-description text-sm box-md">
-              Snus-Check specifically aims to make data breach research faster
-              and more efficient.<br /><br />This is my first personal project
-              while attending BCCA.
-            </div>
-            <a
-              href="https://github.com/jobyfoster/snus-check"
-              class="project-link text-md"
-              target="_blank"
-              rel="noreferrer"
-              >View Project</a
-            >
-            <div class="project-skills flex-row-wrap">
+      <div id="projects-and-skills" class="flex-row-wrap">
+        <section id="projects">
+          <div class="text-lg" id="projects-header">Projects</div>
+          <div id="project-cards-container" class="flex-row-wrap">
+            <div class="project-card box-md flex-column-wrap">
+              <div class="project-name box-sm">Snus-Check</div>
               <img
-                class="project-skill"
-                src="images/skill-icons/python.png"
-                alt="Python Icon"
+                class="project-image"
+                src="images/projects/snuscheck.png"
+                alt="Snus-Check logo"
               />
-              <img
-                class="project-skill"
-                src="images/skill-icons/json.png"
-                alt="JSON Icon"
-              />
-              <img
-                class="project-skill"
-                src="images/skill-icons/api.png"
-                alt="API Icon"
-              />
+              <div class="project-description text-sm box-md">
+                Snus-Check specifically aims to make data breach research faster
+                and more efficient.<br /><br />This is my first personal project
+                while attending BCCA.
+              </div>
+              <a
+                href="https://github.com/jobyfoster/snus-check"
+                class="project-link text-md"
+                target="_blank"
+                rel="noreferrer"
+                >View Project</a
+              >
+              <div class="project-skills flex-row-wrap">
+                <img
+                  class="project-skill"
+                  src="images/skill-icons/python.png"
+                  alt="Python Icon"
+                />
+                <img
+                  class="project-skill"
+                  src="images/skill-icons/json.png"
+                  alt="JSON Icon"
+                />
+                <img
+                  class="project-skill"
+                  src="images/skill-icons/api.png"
+                  alt="API Icon"
+                />
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+
+        <section id="skills">
+          <table id="skills-table">
+            <tr>
+              <th colspan="2" id="skills-header" class="text-lg">Skills</th>
+            </tr>
+            <tbody id="skills-tb-body">
+              <tr class="table-skill-row">
+                <td class="skill-data box-sm text-md">
+                  <div class="flex-row-wrap">
+                    <img
+                      class="skill-image"
+                      src="images/skill-icons/python.png"
+                      alt=""
+                    />
+                    <p class="skill-tb-text">Python</p>
+                  </div>
+                </td>
+                <td class="skill-data box-sm text-md">
+                  <div class="flex-row-wrap">
+                    <img
+                      class="skill-image"
+                      src="images/skill-icons/html.png"
+                      alt=""
+                    />
+                    <p class="skill-tb-text">HTML</p>
+                  </div>
+                </td>
+              </tr>
+              <tr class="table-skill-row">
+                <td class="skill-data box-sm text-md">
+                  <div class="flex-row-wrap">
+                    <img
+                      class="skill-image"
+                      src="images/skill-icons/css.png"
+                      alt=""
+                    />
+                    <p class="skill-tb-text">CSS</p>
+                  </div>
+                </td>
+                <td class="skill-data box-sm text-md">
+                  <div class="flex-row-wrap">
+                    <img
+                      class="skill-image"
+                      src="images/skill-icons/mysql.png"
+                      alt=""
+                    />
+                    <p class="skill-tb-text">MySQL</p>
+                  </div>
+                </td>
+              </tr>
+              <tr class="table-skill-row">
+                <td class="skill-data box-sm text-md">
+                  <div class="flex-row-wrap">
+                    <img
+                      class="skill-image"
+                      src="images/skill-icons/reactjs.png"
+                      alt=""
+                    />
+                    <p class="skill-tb-text">React.js</p>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
 
       <section id="resume" class="flex-column-wrap">
         <div id="resume-cta" class="text-lg">
-          See the Work,
-          <a id="cta-ktt" href="resume.pdf" target="_blank">Know the Talent</a>
+          See my Path,
+          <a id="cta-ktt" href="/resume" target="_blank">View My Resume</a>
         </div>
       </section>
 
-      <section id="socials" class="flex-column-wrap">
+      <section id="contacts-socials" class="flex-row-wrap">
         <div class="custom-hr"></div>
-        <div id="social-cta-first-line" class="social-cta text-lg">
-          Stay Updated, Stay Ahead.
+        <div id="contacts-text" class="text-sm box-sm">
+          <div class="text-md">Contact Me:</div>
+          <a href="mailto: jobyjfoster@gmail.com">jobyjfoster@gmail.com</a>
         </div>
-        <br />
-        <div class="social-cta text-lg">Follow My Socials.</div>
+        <div id="socials">
+          <div id="social-cta">Stay Updated &amp Follow My Socials</div>
 
-        <div id="social-links" class="flex-row-wrap">
-          <a href="https://github.com/jobyfoster"
-            ><img class="socials-img" src="images/socials/github.png" alt=""
-          /></a>
+          <div id="social-links" class="flex-row-wrap">
+            <a class="social-link" href="https://github.com/jobyfoster"
+              ><img
+                class="social-img"
+                src="images/socials/github.png"
+                alt="github-logo"
+            /></a>
+            <a class="social-link" href="https://github.com/jobyfoster"
+              ><img
+                class="social-img"
+                src="images/socials/linkedin.png"
+                alt="linkedin-logo"
+            /></a>
+          </div>
         </div>
       </section>
     </div>

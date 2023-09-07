@@ -43,7 +43,7 @@ body {
 }
 
 .box-md {
-  padding: 1.5em 1em;
+  padding: 1em;
   margin: 2em 1em;
 }
 
@@ -62,11 +62,11 @@ body {
 
 /* Animations */
 .slide-in-right {
-  animation: slide-in-right 0.6s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
+  animation: slide-in-right 0.6s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 .slide-in-left {
-  animation: slide-in-left 0.6s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
+  animation: slide-in-left 0.6s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 @keyframes slide-in-left {
@@ -81,6 +81,15 @@ body {
 @keyframes slide-in-right {
   0% {
     transform: translateX(250%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slide-in-up {
+  0% {
+    transform: translateY(250%);
   }
   100% {
     transform: translateX(0%);
@@ -244,9 +253,9 @@ body {
 
 /* Explore my work section */
 #explore-my-work {
-  text-align: center;
-  height: fit-content;
+  padding-top: 0;
 
+  text-align: center;
   align-self: center;
 }
 
@@ -292,7 +301,8 @@ body {
   transition-timing-function: ease-out;
 }
 
-#projects {
+#projects,
+#skills {
   width: 50%;
 }
 
@@ -315,7 +325,7 @@ body {
     rgba(44, 43, 43, 0.425) 100%
   );
 
-  width: 25em;
+  width: 22em;
 
   border: 1px #2b2b2b solid;
   border-radius: 10px;
@@ -336,7 +346,7 @@ body {
 }
 
 .project-image {
-  width: 80%;
+  width: 90%;
 }
 
 .project-description {
@@ -354,7 +364,7 @@ body {
   text-decoration: none;
 
   padding: 0.5em 3em;
-  margin: 1em 0;
+  margin: 1em 0 0.5em;
 
   background-color: #292929;
   border: 2px #303030 solid;
@@ -374,8 +384,32 @@ body {
 
 .project-skill {
   width: auto;
-  height: 3em;
-  margin: 0 10px;
+  height: 2.7em;
+  margin: auto 10px;
+
+  color: white;
+}
+
+#skills-header,
+.table-skill-row {
+  border-bottom: 1px solid #ddd;
+}
+
+#skills-table {
+  margin: 0 auto;
+  width: 60%;
+}
+
+#skills-header {
+  padding-bottom: 0.8em;
+}
+.skill-data {
+  padding-left: 2em;
+}
+.skill-image {
+  width: 3em;
+  height: auto;
+  margin: auto 10px;
 
   color: white;
 }
@@ -383,7 +417,7 @@ body {
 #resume {
   align-items: center;
   justify-content: center;
-  margin: 15em 6em 0;
+  padding: 15em 6em 15em;
 }
 
 #resume-cta {
@@ -413,29 +447,49 @@ body {
   color: #0496ff;
 }
 
-#socials {
-  margin: 8em 8em 0;
-  align-items: center;
+#resume-img-container {
+  animation: slide-in-right 1s cubic-bezier(0.22, 0.61, 0.36, 1);
+  color: white;
+
+  padding: 20px;
 }
 
-.social-cta {
-  font-size: 2.3em;
-  text-align: center;
+#resume-image {
+  width: 50%;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#contacts-socials {
+  margin: 0 15em 0;
+}
+
+#socials {
+  width: fit-content;
+  margin-left: auto;
+}
+
+#social-cta {
+  font-size: 2.1em;
+  margin: 0.5em;
 }
 
 #social-links {
   align-content: center;
-  margin: 2em;
 }
 
-.socials-img {
-  width: 7em;
-  height: 7em;
-
-  padding: 1em;
+#contacts-text * {
+  color: white;
 }
 
-@media only screen and (max-width: 900px) {
+.social-img {
+  width: 5em;
+
+  margin: 1em;
+}
+
+@media only screen and (max-width: 1200px) {
   body {
     padding: 0;
     margin: 0;
@@ -461,7 +515,7 @@ body {
 
   .box-md {
     padding: 1.3em 1em;
-    margin: 1.5em 0.8em;
+    margin: 1em 0.8em 0.5em;
   }
 
   .box-sm {
@@ -508,11 +562,15 @@ body {
   }
 
   #name-title {
+    width: 100%;
+    text-align: center;
     margin: 0.5em;
   }
 
   #overview-text {
     font-size: 1.1em;
+    padding: 0;
+    text-align: center;
   }
 
   #explore-my-work {
@@ -531,8 +589,14 @@ body {
     width: 70%;
   }
 
-  #projects {
+  #projects,
+  #skills {
+    width: 100%;
     margin: 0;
+  }
+
+  #projects-and-skills {
+    flex-direction: column;
   }
 
   .sub-headings {
@@ -588,8 +652,17 @@ body {
     margin: 0 15px;
   }
 
+  #skills-table {
+    width: 100%;
+  }
+
+  .skill-image {
+    margin-left: 0;
+  }
+
   #resume {
-    margin: 2em 0;
+    margin: 4em 0;
+    padding: 0;
     text-align: center;
   }
 
@@ -600,7 +673,7 @@ body {
   }
 
   #socials {
-    margin: 2em 0;
+    margin: 0;
     padding: 0;
 
     font-size: 0.9em;
