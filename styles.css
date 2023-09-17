@@ -144,12 +144,12 @@ body {
 
 /* About Me Section */
 #about-me {
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   color: white;
 
-  padding-left: 0;
-
+  padding-left: 10em;
+  padding-left: 10em;
   margin-top: 5em;
   margin-bottom: 13em;
 }
@@ -302,9 +302,9 @@ body {
   transition-timing-function: ease-out;
 }
 
-#projects,
-#skills {
-  width: 50%;
+#skills,
+#projects {
+  flex-basis: 50%;
 }
 
 #projects-header {
@@ -367,7 +367,7 @@ body {
   padding: 0.5em 3em;
   margin: 1em 0 0.5em;
 
-  background-color: #292929;
+  background-color: #00c6c2;
   border: 2px #303030 solid;
 
   transition: background-color 1s;
