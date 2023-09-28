@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>jobyfoster.dev</title>
 
-    <link rel="stylesheet" href="css/styles.css" />
+    <link id="stylesheet" rel="stylesheet" href="css/dark-theme.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,6 +23,7 @@
       content="Portfolio website for Joby Foster, a Software Developer"
     />
     <meta property="og:image" content="images/headshot.png" />
+    <script type="module" src="theme-switch.js"></script>
   </head>
 
   <body>
@@ -51,18 +52,28 @@
     <div class="content-container" role="main">
       <section id="about-me" class="box-lg flex-row-wrap">
         <div id="about-me-overview" class="slide-in-left box-lg flex-row-wrap">
-          <img
-            id="headshot"
-            class="box-sm"
-            src="images/headshot.png"
-            alt="My Headshot"
-            title="Me >:)"
-            loading="lazy"
-          />
+          <div id="about-me-ov-top" class="flex-row-wrap">
+            <img
+              id="headshot"
+              class="box-sm"
+              src="images/headshot.png"
+              alt="My Headshot"
+              title="Me >:)"
+              loading="lazy"
+            />
 
-          <div id="name-title" class="flex-column-wrap">
-            <div id="name">Joby Foster</div>
-            <div id="title">Software Developer</div>
+            <div id="name-title" class="flex-column-wrap">
+              <div id="name">Joby Foster</div>
+              <div id="title">Software Developer</div>
+            </div>
+
+            <div id="theme-switch">
+              <img
+                id="theme-switch-svg"
+                src="images/brightness.svg"
+                alt="theme-switch"
+              />
+            </div>
           </div>
 
           <div class="custom-hr"></div>
@@ -86,7 +97,7 @@
           </div>
         </div>
 
-        <div id="explore-my-work" class="slide-in-right box-lg">
+        <div id="explore-my-work" class="slide-in-right">
           <div id="emw-cta" class="text-lg">
             Transforming<br /><span id="emw-gradient">Ideas</span>
             Into Code
@@ -225,7 +236,9 @@
           <a href="mailto: jobyjfoster@gmail.com">jobyjfoster@gmail.com</a>
         </div>
         <div id="socials">
-          <div id="social-cta">Stay Updated &amp Follow My Socials</div>
+          <div id="social-cta" class="text-md">
+            Stay Updated &amp Follow My Socials
+          </div>
 
           <div id="social-links" class="flex-row-wrap">
             <a class="social-link" href="https://github.com/jobyfoster"

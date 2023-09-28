@@ -137,7 +137,7 @@ body {
 /* Content Container */
 .content-container {
   margin-top: 2em;
-  padding: 6em 5em;
+  padding: 3em 2em;
   color: white;
   background-color: var(--nav-bg-color);
 }
@@ -148,10 +148,7 @@ body {
   align-items: center;
   color: white;
 
-  padding-left: 10em;
-  padding-left: 10em;
-  margin-top: 5em;
-  margin-bottom: 13em;
+  margin: 5em 10em 10em;
 }
 
 /* About me overview */
@@ -161,8 +158,8 @@ body {
 
   background: linear-gradient(
     -120deg,
-    #1e1e1e6c 40%,
-    rgba(44, 43, 43, 0.425) 100%
+    #1e1e1e3a 40%,
+    rgba(44, 43, 43, 0.26) 100%
   );
 
   border-radius: 5px;
@@ -176,6 +173,10 @@ body {
 #about-me-overview:hover {
   padding: 2em;
   border-radius: 10px;
+}
+
+#about-me-ov-top {
+  width: 100%;
 }
 
 /* Name and title container */
@@ -221,6 +222,19 @@ body {
   padding: 0.5em 0.5em 0.3em;
 }
 
+#theme-switch {
+  margin-left: auto;
+}
+
+#theme-switch-svg {
+  width: 55px;
+  filter: invert(0.9);
+}
+
+#theme-switch-svg:hover {
+  cursor: pointer;
+}
+
 .custom-hr {
   margin: 1em 0;
   height: 1px;
@@ -254,15 +268,14 @@ body {
 
 /* Explore my work section */
 #explore-my-work {
-  padding-top: 0;
-
   text-align: center;
   align-self: center;
 }
 
 /* Explore my work text */
 #emw-cta {
-  margin-bottom: 2em;
+  font-size: 3.5em;
+  margin-bottom: 1em;
   color: white;
 }
 
@@ -302,9 +315,15 @@ body {
   transition-timing-function: ease-out;
 }
 
-#skills,
-#projects {
-  flex-basis: 50%;
+#projects-and-skills {
+  margin: 2em 15em;
+  justify-content: space-between;
+
+  flex-basis: 1;
+}
+
+#skills {
+  width: fit-content;
 }
 
 #projects-header {
@@ -367,7 +386,7 @@ body {
   padding: 0.5em 3em;
   margin: 1em 0 0.5em;
 
-  background-color: #00c6c2;
+  background-color: #1e1e1e;
   border: 2px #303030 solid;
 
   transition: background-color 1s;
@@ -391,18 +410,23 @@ body {
   color: white;
 }
 
-#skills-header,
-.table-skill-row {
-  border-bottom: 1px solid #ddd;
-}
-
 #skills-table {
   margin: 0 auto;
-  width: 60%;
+  width: 100%;
+
+  width: 30em;
+  background: linear-gradient(
+    100deg,
+    rgba(44, 43, 43, 0.425) 10%,
+    #1e1e1e6c 100%
+  );
+
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px #2e2e2e;
 }
 
 #skills-header {
-  padding-bottom: 0.8em;
+  padding: 0.6em 0;
 }
 
 .skill-data {
@@ -420,7 +444,7 @@ body {
 #resume {
   align-items: center;
   justify-content: center;
-  padding: 15em 6em 15em;
+  margin: 10em;
 }
 
 #resume-cta {
@@ -473,14 +497,17 @@ body {
 }
 
 #social-cta {
-  font-size: 2.1em;
-  margin: 0.5em;
+  margin: 0;
 }
 
 #social-links {
   width: 100%;
-  padding: 1em;
+  padding: 0.5em;
   justify-content: right;
+}
+
+#contacts-text {
+  padding-top: 0;
 }
 
 #contacts-text * {
@@ -488,198 +515,33 @@ body {
 }
 
 .social-img {
-  width: 4em;
+  width: 3.5em;
   margin: 0 0.5em;
 }
 
-@media only screen and (max-width: 1200px) {
-  body {
-    padding: 0;
-    margin: 0;
-  }
-
-  .text-lg {
-    font-size: 2.5em;
-    font-weight: 600;
-  }
-
-  .text-md {
-    font-size: 1.3em;
-  }
-
-  .text-sm {
-    font-size: 1.1em;
-  }
-
-  /* Reusable box classes */
-  .box-lg {
-    padding: 2em 2.5em;
-  }
-
-  .box-md {
-    padding: 1.3em 1em;
-    margin: 1em 0.8em 0.5em;
-  }
-
-  .box-sm {
-    padding: 0.3em;
-  }
-
-  .content-container {
-    margin: 0;
-    padding: 2em;
-    color: white;
-  }
-
-  #navbar {
-    display: none;
-  }
-
+@media only screen and (min-width: 2501px) {
   #about-me {
-    padding: 1em;
-    margin: 0;
-    flex-flow: column wrap;
-    align-content: center;
+    margin: 10em 15em;
   }
 
-  #about-me-overview {
-    padding: 1em 1.25em 1em;
-    margin: 1em 0;
-    width: 100%;
-
-    transition: none;
+  #about-me-overview,
+  #explore-my-work,
+  #skills,
+  #projects {
+    transform: scale(1.1);
   }
 
-  #about-me-overview:hover {
-    padding: 1em 2em 2em;
-    width: 100%;
-    border-radius: 5px;
-  }
-
-  #headshot {
-    display: none;
-  }
-
-  #name {
-    font-size: 2.3em;
-  }
-
-  #name-title {
-    width: 100%;
-    text-align: center;
-    margin: 0.5em;
-  }
-
-  #overview-text {
-    font-size: 1.1em;
-    padding: 0;
-    text-align: center;
-  }
-
-  #explore-my-work {
-    padding: 4em 0;
-    margin: 0;
-  }
-
-  #emw-cta {
-    margin-bottom: 1em;
-    font-size: 2.3em;
-  }
-
-  #emw-button {
-    padding: 0.3em 1.5em;
-    font-size: 1.5em;
-    width: 70%;
-  }
-
-  #projects,
   #skills {
-    width: 100%;
-    margin: 0;
+    margin-left: 5em;
+  }
+}
+
+@media (max-width: 1920px) {
+  #explore-my-work {
+    margin-right: 0;
   }
 
-  #projects-and-skills {
-    flex-direction: column;
-  }
-
-  .sub-headings {
-    font-size: 2.3em;
-    font-weight: 600;
-  }
-
-  #project-cards-container {
-    padding-top: 1em;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-flow: row wrap;
-  }
-
-  .project-card {
-    padding: 0.5em 0.5em 1.5em;
-    margin: 3em 0;
-
-    display: flex;
-    flex-flow: column nowrap;
-
-    background: linear-gradient(
-      -120deg,
-      #1e1e1e6c 40%,
-      rgba(44, 43, 43, 0.425) 100%
-    );
-
-    width: 25em;
-
-    border: 1px #2b2b2b solid;
-    border-radius: 10px;
-  }
-
-  .project-description {
-    padding: 1em;
-    margin: 0;
-  }
-
-  .project-name {
-    align-self: center;
-    margin-bottom: 0.5em;
-    font-size: 1.4em;
-    font-weight: 600;
-  }
-
-  .project-image {
-    align-self: center;
-    width: 90%;
-  }
-
-  .project-skill {
-    margin: 0 15px;
-  }
-
-  #skills-table {
-    width: 100%;
-  }
-
-  .skill-image {
-    margin-left: 0;
-  }
-
-  #resume {
-    margin: 4em 0;
-    padding: 0;
-    text-align: center;
-  }
-
-  #cta-ktt {
-    text-decoration: underline solid #0496ff;
-    text-shadow: 0 0 10px #0496ff38;
-    color: #0496ff;
-  }
-
-  #socials {
-    margin: 0;
-    padding: 0;
-
-    font-size: 0.9em;
-    text-align: center;
+  #skills {
+    width: fit-content;
   }
 }
