@@ -66,31 +66,34 @@ const cssLink = document.getElementById("stylesheet");
 // }
 
 //NEW CODE ~ WE LIKE TO SHOW PROGRESS AROUND HERE.
-const initializeTheme = () => {
-    let selectedTheme = localStorage.getItem("selected_theme");
+const initializeTheme = () => { 
+    let selectedTheme = localStorage.getItem("selected_theme"); //get the selected theme from local storage
 
-    if (selectedTheme && (selectedTheme === "dark" || selectedTheme === "light")) {
-        setTheme(selectedTheme);
-    } else {
-        setTheme("dark");
+    if (selectedTheme && (selectedTheme === "dark" || selectedTheme === "light")) { // if there is a them selected and it equals 'dark' or 'light'
+        setTheme(selectedTheme); // set the theme to the currently selected one
+    } else { //if theres no selected theme in localStorage or it does not equal 'dark' or 'light'
+        setTheme("dark"); //set the theme to dark by default
     }
 }
 
 const setTheme = (theme) => {
-    localStorage.setItem("selected_theme", theme)
-    cssLink.setAttribute("href", `css/${theme}-theme.css`);
+    localStorage.setItem("selected_theme", theme) //set the localStorage key 'selected_item' to the value of 'theme'
+    cssLink.setAttribute("href", `css/${theme}-theme.css`); //set current stylesheet on page
 }
 
 const switchTheme = () => {
-    const currentTheme = localStorage.getItem("selected_theme");
-    if (currentTheme === "dark") {
-        setTheme("light")
+    const currentTheme = localStorage.getItem("selected_theme"); //get the currently selected theme
+    if (currentTheme === "dark") { //if the currentTheme is dark
+        setTheme("light") //we switch the theme to light
     }
-    if (currentTheme === "light") {
-        setTheme("dark");
+    if (currentTheme === "light") { //if the currentTheme is light
+        setTheme("dark"); //we switch the theme to darm
     }
 }
 
+
+//initialize our theme on page load
 initializeTheme();
 
+//call switchTheme function when the themeSwitchButton is clicked
 themeSwitchButton.addEventListener("click", switchTheme)
