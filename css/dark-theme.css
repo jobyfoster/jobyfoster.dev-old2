@@ -367,12 +367,15 @@ body {
 
 .project-image {
   width: 90%;
+  filter: invert(1);
 }
 
 .project-description {
   text-align: center;
 
   word-spacing: 1px;
+
+  font-size: 1.4em;
 
   line-height: 1.4em;
   padding-bottom: 0;
