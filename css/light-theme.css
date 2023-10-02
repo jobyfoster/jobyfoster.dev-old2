@@ -532,3 +532,119 @@ body {
     width: fit-content;
   }
 }
+
+@media (max-width: 1899px) {
+  @keyframes slide-in-left {
+    0% {
+      /* transform: scale(1.2); */
+      transform: translateX(-250%) scale(1.2);
+    }
+    100% {
+      /* transform: scale(1.2); */
+      transform: translateX(0%) scale(1.2);
+    }
+  }
+
+  @keyframes slide-in-right {
+    0% {
+      /* transform: scale(1.2); */
+      transform: translateX(250%) scale(1.1);
+    }
+    100% {
+      /* transform: scale(1.2); */
+      transform: translateX(0%) scale(1.1);
+    }
+  }
+  #about-me {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #about-me-overview {
+    transform: scale(1.2);
+  }
+
+  #explore-my-work {
+    transform: scale(1.1);
+    margin-top: 10em;
+  }
+}
+
+@media (max-width: 1699px) {
+  #projects-and-skills {
+    flex-direction: column;
+  }
+
+  #skills {
+    margin: 0 auto;
+  }
+
+  #projects {
+    margin-top: 10em;
+  }
+
+  #contacts-socials {
+    margin: 0 8em 0;
+  }
+}
+
+@media (max-width: 1399px) {
+  @keyframes slide-in-left {
+    0% {
+      /* transform: scale(1.2); */
+      transform: translateX(-250%) scale(1);
+    }
+    100% {
+      /* transform: scale(1.2); */
+      transform: translateX(0%) scale(1);
+    }
+  }
+
+  @keyframes slide-in-right {
+    0% {
+      /* transform: scale(1.2); */
+      transform: translateX(250%) scale(1);
+    }
+    100% {
+      /* transform: scale(1.2); */
+      transform: translateX(0%) scale(1);
+    }
+  }
+  #about-me {
+    flex-direction: column;
+    justify-content: center;
+
+    margin: 2em;
+  }
+
+  #about-me-overview {
+    transform: scale(1);
+  }
+
+  #explore-my-work {
+    transform: scale(1);
+    margin-top: 10em;
+  }
+
+  #skills {
+    margin-top: 8em;
+  }
+}
+
+@media (max-width: 1249px) {
+  #navbar {
+    display: none;
+  }
+
+  #about-me-overview {
+    width: 100%;
+  }
+
+  #projects-and-skills {
+    margin: 8em 5em;
+  }
+
+  #resume-cta {
+    font-size: 2.5em;
+  }
+}
